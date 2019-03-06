@@ -21,6 +21,7 @@
 export default {
   data () {
     return {
+      img: '',
     	musiclink: [],
     	Hash: [],
         Album: [],
@@ -32,7 +33,7 @@ export default {
   	var id=this.$route.params.id;
   	var url='/GetSongerDetail'+id+'&json=true';
   	this.$axios.get(url).then(res=>{
-      console.log(res);
+      //console.log(res);
       var s=res.data.info.imgurl.split('/');
       this.img=s[0]+'//'+s[2]+'/'+s[3]+'/'+s[4]+'/'+'400'+'/'+s[6]+'/'+s[7];
   		this.musiclink=res.data.songs.list;

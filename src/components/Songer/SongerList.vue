@@ -39,6 +39,7 @@ export default {
   },
   created(){
   	var id=this.$route.params.id;
+    //console.log(id);
   	//获取歌手列表
   	var url='/GetSongerLink'+id+'?json=true';
   	this.$axios.get(url).then(res=>{      	
@@ -46,7 +47,15 @@ export default {
     		this.songer.forEach(i=>{
   			this.songerId.push(i.singerid);
         var s=i.imgurl.split('/');
-        var imglink=s[0]+'//'+s[2]+'/'+s[3]+'/'+s[4]+'/'+'400'+'/'+s[6]+'/'+s[7];
+        var imglink;
+        if(id==88)
+        {
+          imglink=s[0]+'//'+s[2]+'/'+s[3]+'/'+s[4]+'/'+s[5]+'/'+'400'+'/'+s[7]+'/'+s[8];
+        }
+        else
+        {
+          imglink=s[0]+'//'+s[2]+'/'+s[3]+'/'+s[4]+'/'+'400'+'/'+s[6]+'/'+s[7];
+        }
         this.imgurl.push(imglink);
         this.name.push(i.singername);
   		})
