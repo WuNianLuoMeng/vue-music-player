@@ -1,3 +1,4 @@
+<!--推荐歌单界面-->
 <template>
   <div>
     <mt-swipe :auto="4000" style="height: 200px;">
@@ -62,16 +63,7 @@ export default {
         this.name.push(i.specialname);
         this.Id.push(i.specialid);
       })
-      //console.log(res.data.plist.list.info);
-
-      /*this.imgs=res.data.banner;
-      console.log(res);
-      this.result=res.data.data;
-      this.result.forEach(r=>{
-        this.list.push(r.filename);
-        this.Hash.push(r.hash);
-        this.Album.push(r.album_id);
-      })*/     
+      //console.log(res.data.plist.list.info);    
     })
     this.flog=true;
   },

@@ -1,4 +1,4 @@
-
+﻿<!--歌手分类界面-->
 <template>
   <div>
   	<ul class="panel-img-list" style="padding: 0px; margin: 0px;">
@@ -7,7 +7,7 @@
           <div class="panel-img-left" style="width: 5.3751rem;height: 5.3751rem;">
             <img :src="item" style="padding-left:5px;width: 100%;height: 100%">
           </div>
-          <div class="panel-img-content" style="padding-left:  30px;px;;padding-top: 30px;">
+          <div class="panel-img-content" style="padding-left:  30px;padding-top: 30px;">
             <p style="font-size: 1.0714rem;color: #333;">
               {{ name[index] }}
             </p>
@@ -39,7 +39,7 @@ export default {
   },
   created(){
   	var id=this.$route.params.id;
-    //console.log(id);
+                //console.log(id);
   	//获取歌手列表
   	var url='/GetSongerLink'+id+'?json=true';
   	this.$axios.get(url).then(res=>{      	
@@ -48,7 +48,7 @@ export default {
   			this.songerId.push(i.singerid);
         var s=i.imgurl.split('/');
         var imglink;
-        if(id==88)
+        if(id==88)    //热门歌手
         {
           imglink=s[0]+'//'+s[2]+'/'+s[3]+'/'+s[4]+'/'+s[5]+'/'+'400'+'/'+s[7]+'/'+s[8];
         }

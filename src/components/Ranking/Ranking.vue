@@ -1,4 +1,4 @@
-
+<!--排行榜界面-->
 <template>
   <div>
     <ul class="panel-img-list" style="padding: 0px; margin: 0px;">
@@ -7,7 +7,7 @@
           <div class="panel-img-left" style="width: 5.3751rem;height: 5.3751rem;">
             <img :src="item" style="padding-left:5px;width: 100%;height: 100%">
           </div>
-          <div class="panel-img-content" style="padding-left:  30px;px;;padding-top: 30px;">
+          <div class="panel-img-content" style="padding-left:  30px;padding-top: 30px;">
             <p style="font-size: 1.0714rem;color: #333;">
               {{ name[index] }}
             </p>

@@ -5,7 +5,6 @@ import Ranking from '@/components/Ranking/Ranking'
 import Recommend from '@/components/Recommend/Recommend'
 import Search from '@/components/Search/Search'
 import Songer from '@/components/Songer/Songer'
-import Back from '@/components/Back/Back'
 import MusicInterface from '@/components/MusicInterface/MusicInterface'
 import SongerDetail from '@/components/SongerDetail/SongerDetail'
 import SongerList from '@/components/Songer/SongerList'
@@ -38,11 +37,6 @@ export default new Router({
       path: '/Songer',
       name: 'songer',
       component: Songer
-    },
-    {
-      path: '/Back',
-      name: 'back',
-      component: Back
     },
     {
       path: '/MusicInterface',
